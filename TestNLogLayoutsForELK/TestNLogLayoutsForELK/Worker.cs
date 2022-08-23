@@ -88,6 +88,8 @@ public class Worker
         };
         t.Enabled = true;
 
-        Console.ReadKey();
+        // Console.ReadKey();
+        
+        Thread.Sleep(Timeout.Infinite);
     }
 }
