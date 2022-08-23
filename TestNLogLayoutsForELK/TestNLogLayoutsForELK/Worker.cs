@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using Timer = System.Timers.Timer;
 
 namespace TestNLogLayoutsForELK;
@@ -22,18 +23,24 @@ public class Worker
 
         var car = new Car
         {
-            Color = "Red",
+            Color = "Red1",
             Length = 5M
-        };
+        };  
 
         _logger.LogInformation("{car}", car);
 
         if (_logger.IsEnabled(LogLevel.Debug))
             _logger.LogDebug("DEBUG IS ENABLED; DEBUG LOG FOR: {carDebug}", car);
+        string message = "Test Message";
+        string message2 = "Test Message2";
+        _logger.LogInformation("Just a random log with var message: {message1} {message2}", message, message2);
+        
+        _logger.LogInformation($"Testing test {JsonConvert.SerializeObject(new Car(){Color = "testcolor"})}");
+        
 
         try
         {
-            throw new ArgumentException("testing the custom exception!!");
+            throw new ArgumentException("testing the custom exception!!", new Exception("Inner exception details"));
         }
         catch (Exception ex)
         {

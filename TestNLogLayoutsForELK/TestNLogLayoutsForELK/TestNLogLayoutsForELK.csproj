@@ -5,6 +5,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
     <ItemGroup>
@@ -12,8 +13,8 @@
         <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
         <PackageReference Include="NLog" Version="5.0.0" />
         <PackageReference Include="NLog.Config" Version="4.7.15" />
-        <PackageReference Include="NLog.Extensions.Hosting" Version="5.0.0-rc2" />
-        <PackageReference Include="NLog.Extensions.Logging" Version="5.0.0-rc2" />
+        <PackageReference Include="NLog.Extensions.Hosting" Version="5.0.0" />
+        <PackageReference Include="NLog.Extensions.Logging" Version="5.0.0" />
         <PackageReference Include="NLog.Schema" Version="5.0.0" />
     </ItemGroup>
 
