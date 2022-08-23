@@ -4,7 +4,7 @@ WORKDIR /app
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["TestNLogLayoutsForELK.csproj", "TestNLogLayoutsForELK/"]
-RUN dotnet restore "TestNLogLayoutsForELK/TestNLogLayoutsForELK.csproj"
+# RUN dotnet restore "TestNLogLayoutsForELK/TestNLogLayoutsForELK.csproj"
 COPY . .
 WORKDIR "/src/TestNLogLayoutsForELK"
 RUN dotnet build "TestNLogLayoutsForELK.csproj" -c Release -o /app/build
