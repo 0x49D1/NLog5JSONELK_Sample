@@ -5,7 +5,7 @@ services:
       context: ./TestNLogLayoutsForELK
       dockerfile: Dockerfile
     volumes:
-      - test:/home/test
+      - test:/var/logs
 volumes:
   test:
     external: true
