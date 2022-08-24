@@ -3,7 +3,7 @@ services:
   testnlog-service:
     build:
       context: ./TestNLogLayoutsForELK
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.arm
     volumes:
       - test:/app/logs
 volumes:
