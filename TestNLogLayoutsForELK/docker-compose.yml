@@ -1,6 +1,8 @@
 version: "3"
 services:
   testnlog-service:
+    container_name: testnlog-service
+    hostname: testnlog-service
     build:
       context: ./TestNLogLayoutsForELK
       dockerfile: Dockerfile
